@@ -1,18 +1,9 @@
+
 pmOnFail: ignore
 
 minimumReleaseAgeExclude:
   - '@next/*'
   - next
-pmOnFail: ignore
-
-minimumReleaseAgeExclude:
-  - '@next/*'
-  - next
-
-allowBuilds:
-  esbuild: true
-  workerd: true
-
 
 allowBuilds:
   esbuild: true
