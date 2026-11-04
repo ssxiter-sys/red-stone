@@ -7,52 +7,43 @@ const display = Anton({ subsets: ['latin'], weight: '400', variable: '--font-dis
 const sans = Space_Grotesk({ subsets: ['latin'], variable: '--font-sans' })
 const arabic = Cairo({ subsets: ['arabic'], variable: '--font-arabic' })
 
+const siteUrl = 'https://red-stone.ssxiter.workers.dev'
+const shareImage = `${siteUrl}/images/whatsapp-preview.jpg`
+
 export const metadata: Metadata = {
-  title: 'REDSTONE — Streetwear Brand',
+  metadataBase: new URL(siteUrl),
+  title: 'REDSTONE | Clothing Store',
   description:
-    'REDSTONE is a streetwear label built on heavy fabrics, bold graphics and zero compromise. Hoodies, tees, denim and essentials.',
-  generator: 'v0.app',
+    'REDSTONE — Wear Your Identity. اكتشف أحدث قطع الملابس والستريت وير من REDSTONE.',
   icons: {
-    icon: '/images/logo.png',
+    icon: [
+      { url: '/images/logo.png', type: 'image/png' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
     apple: '/images/logo.png',
   },
   openGraph: {
-    title: 'REDSTONE — Streetwear Brand',
-    description:
-      'Heavy fabrics. Loud graphics. Zero compromise. REDSTONE is streetwear cut for the ones who move different.',
+    title: 'REDSTONE | Clothing Store',
+    description: 'WEAR YOUR IDENTITY. اكتشف مجموعة REDSTONE الجديدة.',
+    url: siteUrl,
+    siteName: 'REDSTONE',
     images: [
       {
-        url: '/images/og-image.png',
+        url: shareImage,
         width: 1200,
         height: 630,
-        alt: 'REDSTONE — luxury streetwear brand',
+        type: 'image/jpeg',
+        alt: 'REDSTONE — Clothing Store Logo',
       },
     ],
+    locale: 'ar_EG',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'REDSTONE — Streetwear Brand',
-    description:
-      'Heavy fabrics. Loud graphics. Zero compromise. REDSTONE is streetwear cut for the ones who move different.',
-    images: ['/images/og-image.png'],
-  },
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    title: 'REDSTONE | Clothing Store',
+    description: 'WEAR YOUR IDENTITY. اكتشف مجموعة REDSTONE الجديدة.',
+    images: [shareImage],
   },
 }
 
